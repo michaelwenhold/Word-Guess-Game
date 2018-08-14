@@ -1,3 +1,32 @@
-#test {
-    background-color: red;
+body {
+    background-image: url("https://www.50-best.com/images/nfl_team_wallpapers/nfl_on_black_wallpaper.jpg");
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+}
+
+.container {
+    color: white;
+    margin-top: 25px;
+    font-size:25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.remaining {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.already {
+    border: 1px solid red;
+    height: 200px;
+    width: 260px;
 }
