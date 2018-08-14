@@ -3,10 +3,14 @@ const words = ["Patriots", "Bills", "Dolphins", "Jets", "Chiefs", "Chargers", "R
 
 let currentWord;
 let dashes = [];
+let rightLetter = [];
+let wrongLetter = [];
 
 //Computer chooses a random word
 function startGame(){
     currentWord = words[Math.floor(Math.random() * 32)];
+
+//Test
     console.log(currentWord);
 
  //Creates dashes depending on length of the word chosen  
@@ -16,15 +20,21 @@ function startGame(){
     return dashes;
     
     let formattedDashes =  dashes.join(' ');
-    document.getElementById('dashContainer').innerHTML = formattedDashes;   
+    document.getElementById('dashContainer').innerHTML = formattedDashes;  
 }
 
 //Guessed letter gets Unicode value
     document.addEventListener('keypress', (event) => {
         let codes = event.keyCode;
+
 //Convert a Unicode number into a character
         let characters = String.fromCharCode(codes);
         console.log(characters)
+
+//Is users guess correct?
+        if(currentWord.indexOf(characters) > -1)
+        rightLetter.push(characters);
+        console.log(rightLetter);
     })
 
 //Start game function
