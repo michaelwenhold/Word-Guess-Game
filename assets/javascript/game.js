@@ -6,14 +6,14 @@ let dashes = [];
 let rightLetter = [];
 let wrongLetter = [];
 
-//Computer chooses a random word
+//Computer chooses a random word from the words array. The random choice becomes currentWord
 function startGame(){
-    currentWord = words[Math.floor(Math.random() * 32)];
+    currentWord = words[Math.floor(Math.random() * words.length)];
 
 //Test
     console.log(currentWord);
 
- //Creates dashes depending on length of the word chosen  
+ //Creates underscores depending on length of the currentWord; push underscores to dashes array 
     for ( let i = 0; i < currentWord.length; i++ ) {
         dashes.push(' _ ');
     }
@@ -23,18 +23,26 @@ function startGame(){
     document.getElementById('dashContainer').innerHTML = formattedDashes;  
 }
 
-//Guessed letter gets Unicode value
+//HTML document waits for key to be pressed; key is assiged Unicode value
     document.addEventListener('keypress', (event) => {
         let codes = event.keyCode;
 
-//Convert a Unicode number into a character
+//Convert a Unicode value into a character
         let characters = String.fromCharCode(codes);
+//Test        
         console.log(characters)
 
-//Is users guess correct?
+//Search currentWord for the users correct guess; push character to rightLetter array
         if(currentWord.indexOf(characters) > -1)
         rightLetter.push(characters);
+//Test
         console.log(rightLetter);
+
+//Search currentWord for the users incorrect guess; push character to wrongLetter array
+        if(currentWord.indexOf(characters) < 0)
+        wrongLetter.push(characters);
+//Test        
+        console.log(wrongLetter);
     })
 
 //Start game function
