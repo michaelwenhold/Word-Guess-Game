@@ -1,5 +1,5 @@
 //Array of available words
-const words = ["Patriots", "Bills", "Dolphins", "Jets", "Chiefs", "Chargers", "Raiders", "Broncos", "Steelers", "Ravens", "Bengals", "Browns", "Jaguars", "Titans", "Colts", "Texans", "Eagles", "Cowboys", "Redskins", "Giants", "Rams", "Seahawks", "Cardinals", "Niners", "Vikings", "Lions", "Packers", "Bears", "Saints", "Panthers", "Falcons", "Buccaneers"];
+const words = ["patriots", "bills", "dolphins", "jets", "chiefs", "chargers", "raiders", "broncos", "steelers", "ravens", "bengals", "browns", "jaguars", "titans", "colts", "texans", "eagles", "cowboys", "redskins", "giants", "rams", "seahawks", "cardinals", "niners", "vikings", "lions", "packers", "bears", "saints", "panthers", "falcons", "buccaneers"];
 
 let currentWord;
 let dashes = [];
@@ -48,13 +48,12 @@ console.log(startGame());
         wrongLetter.push(characters);
 //Test        
         console.log(wrongLetter);
+    
+
+        document.querySelector(".wrong").innerHTML = wrongLetter;       
     })
 
-//Start game function
-//startGame()
-
-
 //Test Example
-document.getElementById("start").addEventListener("click",function(){
-    alert("Good Luck!")
-})
+//document.getElementById("start").addEventListener("click",function(){
+//    alert("Good Luck!")//
+

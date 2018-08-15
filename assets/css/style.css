@@ -24,13 +24,21 @@ h1 {
     padding-bottom: 20px;
 }
 
-.already {
+.text {
     border: 1px solid red;
-    height: 200px;
+    height: 30px;
     width: 260px;
 }
 
-.dashContainer {
+.wrong {
+    border: 1px solid yellow;
+    height: 200px;
+    width: 260px;
+    color: white;
+    font-size: 20px;
+}
+
+#dashContainer {
     border: 1px solid red;
     height: 200px;
     width: 260px;
