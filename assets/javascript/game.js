@@ -26,10 +26,10 @@ console.log(currentWord)
 //test
 console.log(startGame());
 
-//HTML document waits for key to be pressed; key is assiged Unicode value
+//HTML document waits for key to be pressed; key is assiged Unicode value (a/A are diff)
     document.addEventListener('keypress', (event) => {
         let codes = event.keyCode;
-
+        
 //Convert a Unicode value into a character
         let characters = String.fromCharCode(codes);
 
