@@ -10,21 +10,23 @@ let wrongLetter = [];
 function startGame(){
     currentWord = words[Math.floor(Math.random() * words.length)];
 
-//test
-console.log(currentWord)
+    //test
+    // console.log(currentWord)
 
- //Creates underscores depending on length of the currentWord; push underscores to dashes array 
+    //Creates underscores depending on length of the currentWord; push underscores to dashes array 
     for ( let i = 0; i < currentWord.length; i++ ) {
         dashes.push(' _ ');
     }
-    return dashes;
-  
-    let formattedDashes =  dashes.join(' ');
-    document.getElementByClassName('dashContainer').innerHTML = formattedDashes;  
+
+    writeWordDashes(dashes.join(' '))
+}
+
+function writeWordDashes(str){
+    document.querySelector("#dashContainer").innerHTML = str;
 }
 
 //test
-console.log(startGame());
+startGame();
 
 //HTML document waits for key to be pressed; key is assiged Unicode value (a/A are diff)
     document.addEventListener('keypress', (event) => {

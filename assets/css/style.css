@@ -32,7 +32,7 @@ h1 {
 
 .wrong {
     border: 1px solid yellow;
-    height: 200px;
+    height: 75px;
     width: 260px;
     color: white;
     font-size: 20px;
@@ -40,9 +40,8 @@ h1 {
 
 #dashContainer {
     border: 1px solid red;
-    height: 200px;
+    height: 75px;
     width: 260px;
-    background-color: white;
 }
 
 #start {
