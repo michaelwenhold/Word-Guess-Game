@@ -6,18 +6,23 @@ let dashes = [];
 let rightLetter = [];
 let wrongLetter = [];
 
+//Click button to start game
+document.getElementById("start").addEventListener("click",function(){
+    startGame("")
+})
+
 //Computer chooses a random word from the words array. The random choice becomes currentWord
 function startGame(){
     currentWord = words[Math.floor(Math.random() * words.length)];
-    
-    //test
-    // console.log(currentWord)
 
-    //Creates underscores depending on length of the currentWord; push underscores to dashes array 
+
+//Creates underscores depending on length of the currentWord; push underscores to dashes array 
     for ( let i = 0; i < currentWord.length; i++ ) {
         dashes.push(' _ ');
     }
 
+   
+   
     writeWordDashes(dashes.join(' '))
 }
 
@@ -25,8 +30,9 @@ function writeWordDashes(str){
     document.querySelector("#dashContainer").innerHTML = str;
 }
 
-//test
-//startGame();
+
+
+
 
 //HTML document waits for key to be pressed; key is assiged Unicode value (a/A are diff)
     document.addEventListener('keypress', (event) => {
@@ -38,24 +44,18 @@ function writeWordDashes(str){
 //Search currentWord for the users correct guess; push character to rightLetter array
         if(currentWord.indexOf(characters) > -1)
         rightLetter.push(characters);
+        
 
 //Replace dashes with correctly choosen characters
         dashes[currentWord.indexOf(characters)] = characters;
-        console.log(dashes);
-
         
 
 //Search currentWord for the users incorrect guess; push character to wrongLetter array
         if(currentWord.indexOf(characters) < 0)
         wrongLetter.push(characters);
-//Test        
-        console.log(wrongLetter);
     
-
         document.querySelector(".wrong").innerHTML = wrongLetter;       
     })
 
 
-document.getElementById("start").addEventListener("click",function(){
-   startGame("")
-})
+        
