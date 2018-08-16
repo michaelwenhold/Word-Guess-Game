@@ -9,7 +9,7 @@ let wrongLetter = [];
 //Computer chooses a random word from the words array. The random choice becomes currentWord
 function startGame(){
     currentWord = words[Math.floor(Math.random() * words.length)];
-
+    
     //test
     // console.log(currentWord)
 
@@ -26,7 +26,7 @@ function writeWordDashes(str){
 }
 
 //test
-startGame();
+//startGame();
 
 //HTML document waits for key to be pressed; key is assiged Unicode value (a/A are diff)
     document.addEventListener('keypress', (event) => {
@@ -55,7 +55,7 @@ startGame();
         document.querySelector(".wrong").innerHTML = wrongLetter;       
     })
 
-//Test Example
-//document.getElementById("start").addEventListener("click",function(){
-//    alert("Good Luck!")//
 
+document.getElementById("start").addEventListener("click",function(){
+   startGame("")
+})
