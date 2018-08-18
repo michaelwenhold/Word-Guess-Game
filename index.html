@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
 </head>
+
 <body>
     <h1>NFL HANGMAN</h1>
-    
 
+   
     <div class="container">
-        <div class="wins">Games Won:</div>
-        <div class="remaining">Guesses Left:</div>
-
+        <p>Wins:</p>
+        <div id="wins"></div>
+        <br>
+        <br>    
+        <p>Wrong Guesses Left:</p>
+        <div id="guesses"></div>
+        <br>
+        <br>
         <div class="text">Incorrect Letters:</div>
         <div class="wrong"></div>
+        <p>Which team is this?</p>
         <div id="dashContainer"></div>
     </div>
-    
+
 
     <button id="start">--Start Game--</button>
+    <div class="playAgain">
+    <p>Press Enter to Play Again</p>
+    </div>
 
     <script src="./assets/javascript/game.js"></script>
-    
+
 
 
 
 </body>
+
 </html>

@@ -14,14 +14,13 @@ h1 {
 
 .container {
     color: white;
-    margin-top: 100px;
+    margin-top: 65px;
     font-size:25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.remaining {
-    padding-top: 20px;
-    padding-bottom: 20px;
+#guesses {
+    margin-top: 5px;
 }
 
 .text {
@@ -37,21 +36,31 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 7px;
     line-height: 45px;
-    font-weight: bold;
 }
 
 #dashContainer {
     height: 75px;
     width: 400px;
     letter-spacing: 7px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
    
 }
 
 #start {
     margin-left: 583px;
-    margin-top: 125px;
     border-radius: 50%;
     padding: 20px;
     background-color: brown;
     color: white;
 }
+
+#wins {
+    margin-top: 5px;
+}
+
+.playAgain {
+    color: white;
+    margin-left: 563px;
+} 
